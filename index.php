@@ -9,8 +9,8 @@
 <head>
   <meta charset="utf-8">
   <title>Alysscendre.io</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script src="static/script.js"></script>
 </head>
 <body>      
 
@@ -22,12 +22,15 @@
         
         <div class="paralax">
 
+        <?php if (isset($_SESSION['username'])) { ?>
+            <!-- juste les utilisateurs qui sont log peuvent voir l'heure, sinon "fuck off" -->
             <div class="paralaxtext"><p> Welcome ! <?php echo $_SESSION['username']; ?> </br>
                 Aujourd'hui nous sommes le <?php echo date('d/m/Y h:m:s'); ?> .  </p>
-
                 </br> 
             </div>
-
+        <?php } else { ?>
+            <!-- fuck off bro -->
+        <?php } ?>
 
         </div>
 

@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('include/config.php');
 session_start();
 
 if (isset($_POST['username'])){
@@ -26,8 +26,8 @@ if (isset($_POST['username'])){
 <head>
   <meta charset="utf-8">
   <title>Login</title>
-        <link rel="stylesheet" href="login.css" type="text/css">
-  <script src="script.js"></script>
+        <link rel="stylesheet" href="static/login.css" type="text/css">
+        <script src="static/script.js"></script>
 </head>
 <body>      
 
